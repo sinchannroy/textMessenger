@@ -1,0 +1,31 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "accepts": "^1.3.8",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.19.1",
+    "gcp-metadata": "^6.1.0",
+    "google-auth-library": "^8.9.0",
+    "jsonwebtoken": "^9.0.0",
+    "jwt-check-expiration": "^1.0.5",
+    "jwt-decode": "^3.1.2",
+    "mongoose": "^6.8.2",
+    "nodemon": "^3.0.1",
+    "proxy-addr": "^2.0.7",
+    "socket.io": "^4.6.1"
+  }
+}
