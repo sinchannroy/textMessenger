@@ -29,7 +29,7 @@ router.post("/group/rename", Auth, renameGroup);
 router.post("/groupAdd", Auth, addToGroup);
 router.post("/api/users/update", updateInfo);
 router.get("/api/users/update", searchUsers);
-router.post("/groupRemove", Auth, removeFromGroup);
+router.patch("/api/chat/groupRemove", Auth, removeFromGroup);
 router.delete("/removeuser", Auth);
 
 export default router;

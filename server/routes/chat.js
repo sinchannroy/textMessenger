@@ -14,7 +14,7 @@ router.get('/', Auth, fetchAllChats);
 router.post('/group', Auth, createGroup);
 router.patch('/group/rename', Auth, renameGroup);
 router.patch('/groupAdd', Auth, addToGroup);
-router.patch('/groupRemove', Auth, removeFromGroup);
+router.patch('/api/chat/groupRemove', Auth, removeFromGroup);
 router.delete('/removeuser', Auth);
 
 export default router;

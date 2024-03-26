@@ -26,29 +26,34 @@ function Group() {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const [chatName, setChatName] = useState("");
-  const [searchResults, setSearchResults] = useState([])
-  const [search, setSearch] = useState("")
-  const [isLoading, setIsLoading] = useState(false)
-  const [selectedUser, setSelectedUsers] = useState([])
+  const [searchResults, setSearchResults] = useState([]);
+  const [search, setSearch] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [selectedUser, setSelectedUsers] = useState([]);
+
   const handleOpen = () => setOpen(true);
+
   const handleClose = () => {
     setOpen(false)
     setSearch("")
     setSelectedUsers([])
-  }
+  };
+
   const handleFormSearch = async (e) => {
     setSearch(e.target.value)
-  }
+  };
+
   const handleClick = (e) => {
     if (selectedUser.includes(e)) {
       return
     }
     setSelectedUsers([...selectedUser, e])
-  }
+  };
 
   const deleteSelected = (ele) => {
     setSelectedUsers(selectedUser.filter((e) => e._id !== ele._id))
-  }
+  };
+
   const handleSubmit = async () => {
     if (selectedUser.length >= 2) {
 
@@ -59,7 +64,8 @@ function Group() {
       dispatch(fetchChats())
       handleClose()
     }
-  }
+  };
+
   useEffect(() => {
     const searchChange = async () => {
       setIsLoading(true)
@@ -68,9 +74,11 @@ function Group() {
       setIsLoading(false)
     }
     searchChange()
-  }, [search])
+  }, [search]);
+
   useEffect(() => {
-  }, [])
+  }, []);
+  
   return (
     <>
       <button className='mt-1 transition duration-150 ease-in-out' onClick={handleOpen}>

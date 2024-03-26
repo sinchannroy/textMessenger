@@ -176,13 +176,13 @@ function Chat(props) {
             </div>
           </div> :
           <div className={props.className}>
-            <div className='relative'>
-              <div className='absolute top-[40vh] left-[44%] flex flex-col items-center justify-center gap-y-3'>
-                <img className='w-[50px] h-[50px] rounded-[25px]' alt="User profile" src={profilePic} />
-                <h3 className='text-[#111b21] text-[20px] font-medium tracking-wider'>Welcome <span className='text-[#166e48] text-[19px] font-bold'> <strong>User !</strong></span></h3>
-              </div>
+          <div className='relative'>
+            <div className='absolute top-[40vh] left-[44%] flex flex-col items-center justify-center gap-y-3'>
+              <img className='w-[50px] h-[50px] rounded-[25px]' alt="User profile" src={profilePic} />
+              <h3 className='text-[#111b21] text-[20px] font-medium tracking-wider'>Welcome <span className='text-[#166e48] text-[19px] font-bold'> {activeUser.name}</span></h3>
             </div>
           </div>
+        </div>
 
       }
     </>
@@ -191,20 +191,3 @@ function Chat(props) {
 
 export default Chat
 
-// useEffect(() => {
-//   const isValid = async () => {
-//     try {
-//       const data = await validUser();
-//       if (!data?.user) {
-//         // window.location.href = "/login";
-//       }
-//       console.log (data);
-//     }
-
-//     catch (err) {
-//       console.log (err);
-//     }
-//   };
-
-//   isValid();
-// }, []);

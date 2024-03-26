@@ -79,6 +79,7 @@ function Model(props) {
 
   const leaveGroup = async () => {
     const res = await removeUser({ chatId: activeChat._id, userId: activeUser.id })
+    console.log ("jbdvidvdsbv", res);
     if (res._id) {
       dispatch(fetchChats())
       setOpen(false)
@@ -102,10 +103,6 @@ function Model(props) {
   
   return (
     <>
-
-
-
-
       <button onClick={handleOpen}>
         <img className='w-[40px] h-[40px] rounded-[25px]' alt="Profile Pic" src={getChatPhoto(activeChat, activeUser)} />
 
