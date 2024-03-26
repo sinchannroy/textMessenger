@@ -21,16 +21,15 @@ export const fetchChats = createAsyncThunk('redux/chats', async () => {
 const chatsSlice = createSlice({
   name: 'chats',
   initialState,
-  reducers: (builder) =>{
-    builder
-      .addCase(setActiveChat, (state, { payload }) => {
-        state.activeChat = payload;
-      })
-      .addCase(setNotifications, (state, { payload }) => {
-        state.notifications = payload;
-      });
+  reducers: {
+    setActiveChat: (state, { payload }) => {
+      state.activeChat = payload;
+    },
+    setNotifications: (state, { payload }) => {
+      state.notifications = payload;
+    },
   },
-  extraReducers: (builder) =>{
+  extraReducers: (builder) => {
     builder
       .addCase(fetchChats.pending, (state) => {
         state.isLoading = true;

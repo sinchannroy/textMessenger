@@ -6,12 +6,13 @@ export const register = async (req, res) => {
 
     try {
         const existingUser = await user.findOne({ email });
+
         if (existingUser) {
             return res.status(400).json({ error: "User already exists" });
         }
 
         const fullname = `${firstname} ${lastname}`;
-        const hashedPassword = bcrypt.hash(password, 10);
+        const hashedPassword = await bcrypt.hash(password, 10); // Added await here
         const newUser = new user({
             email,
             password: hashedPassword,
@@ -20,7 +21,7 @@ export const register = async (req, res) => {
 
         const token = await newUser.generateAuthToken();
         await newUser.save();
-        res.json({ message: "success", token });
+        res.json({ message: "success", token});
 
     } catch (error) {
         console.log("Error in register", error);

@@ -23,9 +23,9 @@ const style = {
 };
 
 function Group() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
-  const [chatName, setChatName] = useState("")
+  const [chatName, setChatName] = useState("");
   const [searchResults, setSearchResults] = useState([])
   const [search, setSearch] = useState("")
   const [isLoading, setIsLoading] = useState(false)

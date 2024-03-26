@@ -60,11 +60,11 @@ function Home() {
       const user = {
         id: data?.user?._id,
         email: data?.user?.email,
-        // profilePic: data?.user?.profilePic,
+        profilePic: data?.user?.profilePic,
         bio: data?.user?.bio,
         name: data?.user?.name
       }
-      dispatch(setActiveUser(user))
+      dispatch(setActiveUser(user));
     }
     isValid()
 

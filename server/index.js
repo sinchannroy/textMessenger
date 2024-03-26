@@ -19,9 +19,11 @@ const app = express();
 env.config ();
 const port = process.env.PORT || 8000;
 
-app.use(cors({
-  origin: 'http://127.0.0.1:3000'
-}));
+// app.use(cors({
+//   origin: 'http://127.0.0.1:3000'
+// }));
+
+app.use (cors ());
 
 
 

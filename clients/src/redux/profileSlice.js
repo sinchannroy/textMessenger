@@ -8,14 +8,13 @@ const initialState = {
 const profileSlice = createSlice({
   name: "profile",
   initialState,
-  reducers: (builder) =>{
-    builder
-      .addCase(setShowProfile, (state, { payload }) => {
-        state.showProfile = payload;
-      })
-      .addCase(setShowNotifications, (state, { payload }) => {
-        state.showNotifications = payload;
-      });
+  reducers: {
+    setShowProfile: (state, { payload }) => {
+      state.showProfile = payload;
+    },
+    setShowNotifications: (state, { payload }) => {
+      state.showNotifications = payload;
+    },
   },
 });
 

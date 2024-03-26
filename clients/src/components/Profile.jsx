@@ -14,7 +14,6 @@ function Profile(props) {
   const dispatch = useDispatch();
   const { showProfile } = useSelector((state) => state.profile);
   const activeUser = useSelector((state) => state.activeUser);
-  console.log("activeUser", activeUser);
 
   const [formData, setFormData] = useState({
     name: activeUser.name,

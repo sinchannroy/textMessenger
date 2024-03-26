@@ -55,19 +55,19 @@ userSchema.pre('save', async function (next) {
 });
 
 userSchema.methods.generateAuthToken = async function () {
-    try {
-      let token = jwt.sign(
-      { id: this._id, email: this.email },
-      process.env.SECRET,
-      {
-          expiresIn: '24h',
-      }
-      );
-
-      return token;
-    } catch (error) {
-      console.log('error while generating token');
+  try {
+    let token = jwt.sign(
+    { id: this._id, email: this.email },
+    process.env.SECRET,
+    {
+        expiresIn: '24h',
     }
+    );
+
+    return token;
+  } catch (error) {
+    console.log('error while generating token');
+  }
 };
 
 const userModel = mongoose.model('User', userSchema);
