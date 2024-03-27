@@ -12,6 +12,7 @@ import { createGroup } from "../controllers/createGroup.js";
 import { renameGroup } from "../controllers/renameGroup.js";
 import { addToGroup } from "../controllers/addToGroup.js";
 import { removeFromGroup } from "../controllers/removeFromGroup.js";
+import { googleAuth } from "../controllers/googleAuth.js";
 
 const router = express.Router();
 
@@ -19,6 +20,7 @@ router.post("/auth/register", register);
 router.post("/auth/login", login);
 router.get("/auth/login", login);
 router.get("/auth/valid", Auth, validUser);
+router.get("/api/google", googleAuth);
 router.post("/auth/search", searchUsers);
 router.get("/auth/api/user", searchUsers);
 router.get("/api/users/profile", getUserById);

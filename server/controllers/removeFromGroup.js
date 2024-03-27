@@ -3,7 +3,7 @@ import Chat from '../models/chatModel.js';
 export const removeFromGroup = async (req, res) => {
     const { userId, chatId } = req.body;
     const existing = await Chat.findOne({ _id: chatId });
-    console.log ("nnjjfnjn", existing);
+    // console.log ("nnjjfnjn", existing);
     if (existing.users.includes(userId)) {
         Chat.findByIdAndUpdate(chatId, {
             $pull: { users: userId },

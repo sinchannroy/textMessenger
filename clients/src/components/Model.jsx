@@ -78,8 +78,9 @@ function Model(props) {
   };
 
   const leaveGroup = async () => {
-    const res = await removeUser({ chatId: activeChat._id, userId: activeUser.id })
-    console.log ("jbdvidvdsbv", res);
+    // console.log ("jfjfjf", activeChat._id, activeUser.id);
+    const res = await removeUser({ chatId: activeChat._id, userId: activeUser.id });
+    // console.log ("jbdvidvdsbv", res);
     if (res._id) {
       dispatch(fetchChats())
       setOpen(false)

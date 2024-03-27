@@ -50,6 +50,7 @@ function Register() {
         }
     };
 
+    //must check it again
     const googleSuccess = async (res) => {
         if (res?.profileObj) {
             setIsLoading(true);
@@ -58,6 +59,7 @@ function Register() {
                 localStorage.setItem("userToken", response.data.token);
                 setIsLoading(false);
                 pageRoute("/chats");
+                
             } catch (error) {
                 console.error("Error occurred during Google authentication:", error);
                 setIsLoading(false);
@@ -119,7 +121,7 @@ function Register() {
                         </div>
                         <p style={{ display: isLoading ? "none" : "block" }} className='test-[#fff]'>Regsiter</p>
                     </button>
-                    <p className='text-[#fff] text-center sm:-ml-8'>OR</p>
+                    {/* <p className='text-[#fff] text-center sm:-ml-8'>OR</p>
                     <GoogleLogin
                         clientId={process.env.REACT_APP_CLIENT_ID}
                         render={(renderProps) => (
@@ -131,7 +133,7 @@ function Register() {
                         onSuccess={googleSuccess}
                         onFailure={googleFailure}
                         cookiePolicy={'single_host_origin'}
-                    />
+                    /> */}
                 </form>
             </div>
         </div>
