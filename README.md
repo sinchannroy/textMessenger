@@ -12,12 +12,12 @@ This is a real-time chat website that allows users to connect with each other an
 
 # Features
 - Real-time chat: users can send and receive messages in real-time
-- User authentication: users can sign up, log in, and log out using JWT.
+- User authentication: users can sign up, log in, and log out using JWT
 - Group creation: users can create chat rooms and invite others to join
 - Notifications: users can receive notifications on new messages
 - Emojis: users can send and receive emojis in messages
-- Profile page where users can update their avatar and display name.
-- Search functionality.
+- Profile page where users can update their avatar and display name
+- Search functionality
 - Responsive design: the website is optimized for different screen sizes and devices
 
   
