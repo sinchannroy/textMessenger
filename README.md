@@ -19,6 +19,8 @@ This is a real-time chat website that allows users to connect with each other an
 - Profile page where users can update their avatar and display name
 - Search functionality
 - Responsive design: the website is optimized for different screen sizes and devices
+- Works best on Google Chrome
+- Logging, Registering and Edit Details Process may be little slow due to Mongo DB free server.
 
   
 
